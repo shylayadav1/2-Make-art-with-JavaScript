@@ -101,3 +101,5 @@ function doPushups(count) { // "count" is a parameter here
 }
 
 doPushups(12); // the function "doPushups" is executed with an arguemnt of "12"
+
+// Push changes to GitHub
