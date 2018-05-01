@@ -1,7 +1,9 @@
-Workshop: **Make Art with JavaScript** - Ian Nicholson
+## Workshop: **Make Art with JavaScript** - Ian Nicholson
 
 Assignment invite: https://classroom.github.com/g/_rnBAEL9
 
-Intermission Topic 1: **Problem solving** - Vlad Georgescu
+Instructions: https://github.com/michaelghinrichs/p5_scaffold/blob/master/README.md
 
-Intermission Topic 2: **Test-driven development** - Richard Cave
+## Intermission Talk 1: **Problem Solving** - Vlad Georgescu
+
+## Intermission Talk 2: **Test-Driven Development** - Richard Cave
