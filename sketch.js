@@ -1,3 +1,6 @@
+// JavaScript Animation with p5 library
+
+// set up x and y coordinates for center of circle
 var x = 0;
 var y = 0;
 
@@ -8,9 +11,6 @@ function setup() {
 
   // create canvas of size 800 x 800
   createCanvas(800, 800); // origin is in upper left corner
-
-  // set background color
-
 }
 
 // draw() runs on a loop and happens many times
