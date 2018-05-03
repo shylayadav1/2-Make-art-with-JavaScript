@@ -1,42 +1,46 @@
-// JavaScript Animation with p5 library
+// JavaScript animation with p5 library
 
-// set up x and y coordinates for center of circle
-var x = 0;
-var y = 0;
+// initialize coordinates
+var xCoord = 0;
+var yCoord = 0;
 
-// setup() runs once when the page first loads
+// we make the background several times, so we encapsulate that behavior in a function
+function makeBackground() {
+  background(random(255), random(255), random(255));
+}
+
+// setup() runs once when the page loads
+// p5 calls this function
 function setup() {
-  // remove fill
-  noFill();
-
-  // create canvas of size 800 x 800
-  createCanvas(800, 800); // origin is in upper left corner
+  createCanvas(800, 800); // make canvas 800px by 800px
+  makeBackground();
 }
 
-// draw() runs on a loop and happens many times
+// draw() runs forever on a loop
+// p5 calls this function
 function draw() {
-  ellipse(x, y, 20)
-  x = x + 5;
+  fill(random(255), random(255), random(255))
+  ellipse(xCoord, yCoord, 50, 50);
+  xCoord = xCoord + 20;
 
-  if (x > width) {
-      y = y + 100;
-      x = 0;
-    }
+  if (xCoord > width) {
+    yCoord = yCoord + 120;
+    xCoord = 0;
+  }
 
-  if (y > height) {
-      noLoop();
-    }
+  if (yCoord > height) {
+    noLoop();
+  }
 
-  console.log(`x: ${x} y:${y}`);
+  // log coordinates to console for debugging
+  console.log(`x: ${xCoord} y: ${yCoord}`);
 }
 
+// add interactive behavior with mouse
+// p5 calls this function
 function mousePressed() {
   clear();
   makeBackground();
-  fill(Math.random()*255, Math.random()*255, Math.random()*255)
+  fill(random(255), random(255), random(255))
   ellipse(mouseX, mouseY, 40, 40);
-}
-
-function makeBackground() {
-  background(0, 200, 200); // choose your own values from 0 to 255
 }
