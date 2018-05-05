@@ -29,7 +29,9 @@ function draw() {
   }
 
   if (yCoord > height) {
-    noLoop();
+    clear();
+    makeBackground();
+    yCoord = 0;
   }
 
   // log coordinates to console for debugging
